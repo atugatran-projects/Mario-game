@@ -1,5 +1,5 @@
 import { mergeImg, anims } from "../functions/allFunc"
-import { winLose } from "../screenText/winLose"
+import { winLose } from "../screenText/winLoseStart"
 import { game } from "./game"
 const addBg = () => {
     const playerAnims = {
@@ -43,8 +43,8 @@ const addBg = () => {
     loadSound("portal", "sounds/portal.mp3")
 
     game()
-    go("game")
     winLose()
+    go("level")
 
 }
 

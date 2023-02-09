@@ -45,7 +45,7 @@ scene("game", ({ levelId, coins } = { levelId: 0, coins: 0 }) => {
     player.onCollide("portal", () => {
         play("portal")
         if (levelId + 1 < LEVELS.length) {
-            go("game", {
+            go("level", {
                 levelId: levelId + 1,
                 coins: coins,
             })
@@ -140,13 +140,13 @@ scene("game", ({ levelId, coins } = { levelId: 0, coins: 0 }) => {
         switchAnimation('walk');
     })
 
-    onKeyPress("down", () => {
-        player.weight = 3
-    })
+    // onKeyPress("down", () => {
+    //     player.weight = 3
+    // })
 
-    onKeyRelease("down", () => {
-        player.weight = 1
-    })
+    // onKeyRelease("down", () => {
+    //     player.weight = 1
+    // })
 
     onKeyPress("f", () => {
         fullscreen(!fullscreen())

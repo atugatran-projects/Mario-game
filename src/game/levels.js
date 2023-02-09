@@ -1,15 +1,17 @@
 import { patrol } from "../functions/allFunc"
 
 /*
-
-(=) Grass
+(=) land
 ($) coin
 (>) monster
 (%) bonus
 (@) porter
 (#) apple
 (^) blade
-← ↑ → ↓
+(←) arrowLeft 
+(↑) arrowTop
+(→) arrowRight 
+(↓) arrowDown
 */
 
 const LEVELS = [
@@ -38,22 +40,22 @@ const LEVELS = [
         "===========================",
     ],
     [
-        "             $            ",
-        "                          ",
-        "                          @",
-        "                        ===",
-        "     $           =         ",
-        "           =               ",
+        "             $            @",
+        "                      =====",
+        "    $          =           ",
         "                           ",
-        "               $           ",
-        "    ==                    $",
+        "        =                  ",
         "                           ",
-        "           =               ",
-        "                  =        ",
-        "                         ==",
+        "                $    $     ",
+        " ==                       $",
+        "       =                   ",
+        "                           ",
+        "              =            ",
+        "                    =      ",
+        "         $     $         ==",
         "                         $=",
         "                         $=",
-        "=              >      >↑ $=",
+        "   →       ^^^  >^^^  >↑ $=",
         "===========================",
     ],
 ]
@@ -75,6 +77,7 @@ const levelConf = {
         area(),
         pos(0, -9),
         origin("bot"),
+        rotate(10),
         "coin",
     ],
     "%": () => [
