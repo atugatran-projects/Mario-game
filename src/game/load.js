@@ -37,7 +37,7 @@ const addBg = () => {
 
     // Sounds
     loadSound("coin", "sounds/score.mp3")
-    loadSound("powerup", "/sounds/powerup.mp3")
+    loadSound("powerup", "sounds/powerup.mp3")
     loadSound("blip", "sounds/blip.mp3")
     loadSound("hit", "sounds/hit.mp3")
     loadSound("portal", "sounds/portal.mp3")
